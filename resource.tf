@@ -1,7 +1,7 @@
 resource
 "azurerm_resource_group"
-"terraformmay022025"{
+"lynchterraform"{
   name  =
-  "mcit_resource_group_may022025"
+  "mcit_resource_group_lynchterraform"
   location="canadacentral"
   }
