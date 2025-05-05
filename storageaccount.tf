@@ -1,4 +1,4 @@
-resource "azurerm_storage_account" "lynchterraform" {
+resource "azurerm_storage_account" "mcitstorage" {
   name                      = var.lynchterraform
   resource_group_name       = azurerm_resource_group.lynchterraform.name
   location                  = azurerm_resource_group.lynchterraform.location
