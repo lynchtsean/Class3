@@ -6,6 +6,6 @@ resource "azurerm_storage_account" "mcitstorage" {
   account_replication_type  = var.account_replication_type 
   
   tags = {
-    environement = var.environement
+    environement = "dev"
   }
 }
