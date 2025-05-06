@@ -10,7 +10,7 @@ variable "client_secret"{
 variable "tenant_id"{
   type=string
 }
-variable "storage_account_name"{
+variable "lynchterraform"{
   type=string
   default="lynchterraform"
 }
