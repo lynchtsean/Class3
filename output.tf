@@ -19,3 +19,6 @@ output "total_sum"{
 output "total_output"{
   value = local.total_output
 }
+output "character_enemy_output"{
+  value = local.character_enemy_map
+}
