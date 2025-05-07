@@ -6,3 +6,4 @@ output "secondprint"{
 }
 output "lengthsa"{
   value = local.lengthsa
+}
