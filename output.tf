@@ -11,5 +11,5 @@ output "wintersportslist"{
   value = local.winterlistOfSports # "snowboarding","icehockey","iceskating"
 }
 output "resturant_list"{
-  value = local.resturant_list # "keela","jackstrap","mckibbons","escondite","belleprovince"
+  value = local.resturant # "keela","jackstrap","mckibbons","escondite","belleprovince"
 }
