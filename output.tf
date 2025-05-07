@@ -9,4 +9,4 @@ output "lengthsa"{
 }
 output "wintersportslist"{
   value = local.winterlistOfSports[1] # "snowboarding"
-]
+}
