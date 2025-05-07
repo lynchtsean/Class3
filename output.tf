@@ -14,5 +14,5 @@ output "resturants"{
   value = local.resturants # "keela","jackstrap","mckibbons","escondite","belleprovince"
 }
 output "total_sum"{
-  value = sum([for total in local.total_output : tonumber(total)])
+  value = sum([for total in local.total_output : tonumber(150)])
 }
