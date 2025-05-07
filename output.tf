@@ -8,5 +8,5 @@ output "lengthsa"{
   value = local.lengthsa
 }
 output "wintersportslist"{
-  value = local.winterlistOfSports[1] # "snowboarding"
+  value = local.winterlistOfSports[1] # "snowboarding","icehockey","iceskating"
 }
