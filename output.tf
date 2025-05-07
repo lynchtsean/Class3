@@ -10,6 +10,6 @@ output "lengthsa"{
 output "wintersportslist"{
   value = local.winterlistOfSports # "snowboarding","icehockey","iceskating"
 }
-output "resturant_list"{
+output "resturant"{
   value = local.resturant # "keela","jackstrap","mckibbons","escondite","belleprovince"
 }
