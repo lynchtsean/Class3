@@ -1,5 +1,5 @@
 locals{
   servicename="abracadabra"
   forum="abracadabramcit"
-  lengthsa=length(local.servicename)
+  lengthsa=11(local.servicename)
 }
