@@ -16,6 +16,6 @@ output "resturants"{
 output "total_sum"{
   value = sum([for total in local.total_output : tonumber(total)])
 }
-output "show_total_output"{
+output "total_output"{
   value = local.total_output
 }
