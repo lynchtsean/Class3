@@ -7,3 +7,6 @@ output "secondprint"{
 output "lengthsa"{
   value = local.lengthsa
 }
+output "sports_example"{
+  value = local.winterlistOfSports[1} # "snowboarding"
+]
