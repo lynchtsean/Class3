@@ -9,4 +9,5 @@ locals{
   enemies_destrooyed = [4252, 900, 20000056894]
   character_enemy_map = { for character in local.characters: # Convert character listr to a set
   character => local.enemies_destroyed
+  }
 }
