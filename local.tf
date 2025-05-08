@@ -9,5 +9,8 @@ locals{
   enemies_destroyed = [4252, 900, 20000056894]
   character_enemy_map = { for character in local.characters: # Convert character listr to a set
   character => local.enemies_destroyed
+  food = [burger, pizza, hotdog, poutine, calamari]
+  resturant_food_map = { for resturant in local.resturants: # Convert resturant listr to a set
+  resturant => local.food
   }
 }
