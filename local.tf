@@ -12,6 +12,6 @@ locals{
   }
   top5_food = ["burger","pizza","hotdog","poutine","calamari"]
   resturant_food_map = { for resturant in local.resturants: # Convert resturants listr to a set
-  resturant => local.food
+  resturant => local.top5_food
   }
 }
