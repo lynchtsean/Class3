@@ -23,5 +23,5 @@ output "character_enemy_output"{
   value = local.character_enemy_map
 }
 output "resturant_to_food_map"{
-  value = local.top5_food
+  value = local.resturant_food_map
 }
