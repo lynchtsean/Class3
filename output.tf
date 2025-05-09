@@ -37,3 +37,6 @@ output "list_of_numbers" {
 output "lowercased_sentence" {
   value = local.lower_text
 }
+output "extract_canada" {
+  value = substr(var.full_text, 31, 6)
+}
