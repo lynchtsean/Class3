@@ -20,4 +20,4 @@ locals{
   }
   original_text = "I AM A STUDENT AT MCIT"
   lower_text    = lower(local.original_text)
-}
+  }
