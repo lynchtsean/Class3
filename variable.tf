@@ -29,4 +29,5 @@ variable "string_numbers"{
 variable "sentence"{
   type=string
   description="A sentence to convert to uppercase"
+  default"hello class"
 }
