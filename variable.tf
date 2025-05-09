@@ -31,3 +31,7 @@ variable "sentence"{
   description="A sentence to convert to uppercase"
   default="hello class"
 }
+variable "full_text" {
+  type    = string
+  default = "I love the country called Canada, it is awesome"
+}
