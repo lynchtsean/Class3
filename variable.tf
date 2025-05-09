@@ -26,3 +26,7 @@ variable "string_numbers"{
   type=list(string)
   default=["42", "77", "13", "98", "3", "64", "55", "27", "89", "6"]
 }
+variable "sentence"{
+  type=string
+  description="A sentence to convert to uppercase"
+}
