@@ -17,6 +17,5 @@ locals{
   string_numbers = ["42", "77", "13", "98", "3", "64", "55", "27", "89", "6"]
   # Convert strings to numbers and sum
   number_sum = sum([for n in local.string_numbers : tonumber(n)])
-  }
   original_text = "I AM A STUDENT AT MCIT"
   lower_text    = lower(local.original_text)
