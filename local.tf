@@ -18,4 +18,6 @@ locals{
   # Convert strings to numbers and sum
   number_sum = sum([for n in local.string_numbers : tonumber(n)])
   }
-  original_text = ["I AM A STUDENT AT MCIT"]
+locals {
+  original_text = "I AM A STUDENT AT MCIT"
+  lower_text    = lower(local.original_text
