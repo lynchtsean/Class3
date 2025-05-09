@@ -34,3 +34,6 @@ output "uppercased_sentence"{
 output "list_of_numbers" {
   value = local.number_sum
 }
+output "lowercased_sentence" {
+  value = local.lower_text
+}
