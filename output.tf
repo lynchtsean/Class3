@@ -28,3 +28,6 @@ output "resturant_to_food_map"{
 output "sum_of_numbers"{
   value = sum([for n in var.string_numbers : tonumber(n)])
 }
+output "uppercased_sentence"{
+  value = upper(var.sentence)
+}
