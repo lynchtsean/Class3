@@ -31,6 +31,6 @@ output "sum_of_numbers"{
 output "uppercased_sentence"{
   value = upper(var.sentence)
 }
-output "sum_of_numbers" {
+output "list_of_numbers" {
   value = local.number_sum
 }
