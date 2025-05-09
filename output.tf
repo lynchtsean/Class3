@@ -38,5 +38,5 @@ output "lowercased_sentence" {
   value = local.lower_text
 }
 output "extract_canada" {
-  value = substr(var.full_text, 26, 5)
+  value = substr(var.full_text, 26, 6)
 }
