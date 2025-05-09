@@ -14,7 +14,7 @@ locals{
   resturant_food_map = { for resturant in local.resturants: # Convert resturants listr to a set
   resturant => local.top5_food
   }
-  string_numbers = = ["42", "77", "13", "98", "3", "64", "55", "27", "89", "6"]
+  string_numbers = ["42", "77", "13", "98", "3", "64", "55", "27", "89", "6"]
   # Convert strings to numbers and sum
   number_sum = sum([for n in local.string_numbers : tonumber(n)])
 }
