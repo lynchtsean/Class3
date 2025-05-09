@@ -25,6 +25,6 @@ output "character_enemy_output"{
 output "resturant_to_food_map"{
   value = local.resturant_food_map
 }
-output "sum_of_numbers"
+output "sum_of_numbers"{
   value = sum([for n in var.string_numbers : tonumber(n)])
 }
