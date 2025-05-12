@@ -40,3 +40,17 @@ output "lowercased_sentence" {
 output "extract_canada" {
   value = substr(var.full_text, 26, 6)
 }
+output "string_manipulations" {
+  value = {
+    upper          = local.upper_quote
+    lower          = local.lower_quote
+    first_10_chars = local.short_quote
+    reversed       = local.reversed
+    replaced       = local.replaced
+    contains_zip   = local.has_zip
+    joined         = local.joined_quotes
+    split_words    = local.words
+    length         = local.quote_length
+    with_suffix    = local.branded_quote
+  }
+}
