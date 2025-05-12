@@ -54,3 +54,30 @@ output "string_manipulations" {
     with_suffix    = local.branded_quote
   }
 }
+output "reverse_sentence_1" {
+  value = local.reverse_sentence_1
+}
+
+output "last_word_2" {
+  value = local.last_word_2
+}
+
+output "underscore_4" {
+  value = local.underscore_4
+}
+
+output "third_word_5" {
+  value = local.third_word_5
+}
+
+output "cleaned_6" {
+  value = local.cleaned_6
+}
+
+output "reversed_words_8" {
+  value = local.reversed_words_8
+}
+
+output "replaced_11" {
+  value = local.replaced_11
+}
