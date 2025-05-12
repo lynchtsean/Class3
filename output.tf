@@ -62,8 +62,8 @@ output "last_word_2" {
   value = local.last_word_2
 }
 
-output "underscore_4" {
-  value = local.underscore_4
+output "underscored_4" {
+  value = local.underscored_4
 }
 
 output "third_word_5" {
@@ -76,6 +76,14 @@ output "cleaned_6" {
 
 output "reversed_words_8" {
   value = local.reversed_words_8
+}
+
+output "sentence_9_capitalized" {
+  value = local.sentence_9_capitalized
+}
+
+output "sentence_10_title_case" {
+  value = local.sentence_10_title_case
 }
 
 output "replaced_11" {
