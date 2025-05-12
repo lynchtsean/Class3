@@ -54,38 +54,6 @@ output "string_manipulations" {
     with_suffix    = local.branded_quote
   }
 }
-output "reverse_sentence_1" {
-  value = local.reverse_sentence_1
-}
-
-output "last_word_2" {
-  value = local.last_word_2
-}
-
-output "underscored_4" {
-  value = local.underscored_4
-}
-
-output "third_word_5" {
-  value = local.third_word_5
-}
-
-output "cleaned_6" {
-  value = local.cleaned_6
-}
-
-output "reversed_words_8" {
-  value = local.reversed_words_8
-}
-
-output "sentence_9_capitalized" {
-  value = local.sentence_9_capitalized
-}
-
-output "sentence_10_title_case" {
-  value = local.sentence_10_title_case
-}
-
-output "replaced_11" {
-  value = local.replaced_11
+output "all_sentence_tasks" {
+  value = local.all_in_one_line
 }
