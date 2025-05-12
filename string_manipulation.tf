@@ -18,7 +18,7 @@ locals {
 
   # 6. Check if it Contains "zip"
   # Note: Terraform doesn't support `regex` inside `contains()` in locals, so use `contains` instead
-  has_zip = can(regex("zip", local.quote))
+   has_zip = length(regexall("zip", local.quote)) > 0
 
   # 7. Join with a List of Other City Quotes
   other_quotes = ["Toronto: City of condos.", "Vancouver: Rain and real estate."]
