@@ -57,3 +57,9 @@ output "string_manipulations" {
 output "all_sentence_tasks" {
   value = local.all_in_one_line
 }
+output "environment" {
+  value = local.environment
+}
+output "service_name" {
+  value = local.service_name
+}
