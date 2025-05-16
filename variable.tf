@@ -35,3 +35,11 @@ variable "full_text" {
   type    = string
   default = "I love the country called Canada, it is awesome"
 }
+variable "env" {
+  description = "Environment"
+  type        = string
+}
+variable "servicename" {
+  description = "Service name"
+  type        = string
+}
