@@ -22,3 +22,4 @@ locals{
   }
   env="non-prod"
   servicename2="abracadabra"
+  }
