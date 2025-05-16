@@ -60,6 +60,6 @@ output "all_sentence_tasks" {
 output "environment" {
   value = local.environment
 }
-output "service_name" {
-  value = local.service_name
+output "service_name2" {
+  value = local.service_name2
 }
