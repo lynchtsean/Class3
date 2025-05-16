@@ -18,7 +18,7 @@ resource "azurerm_storage_account" "seanstores" {
 
 
   name                     = each.value
-  resource_group_name      = "mcitresources"
+  resource_group_name      = "seanresources"
   location                 = "East US"
   account_tier              = "Standard"
   account_replication_type = "LRS"
