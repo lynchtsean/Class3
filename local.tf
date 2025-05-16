@@ -1,8 +1,6 @@
 locals{
   servicename="abracadabra"
   forum="abracadabramcit"
-  env="non-prod"
-  servicename2="abracadabra"
   lengthsa="11"
   winterlistOfSports = ["icehockey", "snowboarding", "iceskating"]
   total_output = ["150", "150", "150"]
@@ -22,3 +20,5 @@ locals{
   original_text = "I AM A STUDENT AT MCIT"
   lower_text    = lower(local.original_text)
   }
+  env="non-prod"
+  servicename2="abracadabra"
