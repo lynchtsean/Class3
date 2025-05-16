@@ -11,7 +11,7 @@ locals {
   env_service_map = zipmap(var.environments_second, var.service_names_town)
 }
 
-resource "azurerm_storage_account" "mcitstoremay2025second" {
+resource "azurerm_storage_account" "seanstoremay2025second" {
   for_each = local.env_service_map
 
   name                     = each.value
@@ -21,6 +21,6 @@ resource "azurerm_storage_account" "mcitstoremay2025second" {
   account_replication_type = "LRS"
 }
 
-output "mcit16may2025second" {
+output "sean16may2025second" {
   value = local.env_service_map
 }
