@@ -1,8 +1,6 @@
 locals{
   servicename="abracadabra"
   forum="abracadabramcit"
-  env="non-prod"
-  servicename="abracadabra"
   lengthsa="11"
   winterlistOfSports = ["icehockey", "snowboarding", "iceskating"]
   total_output = ["150", "150", "150"]
