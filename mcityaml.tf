@@ -22,7 +22,7 @@ resource "azurerm_service_plan" "mcitdevrm" {
 }
 
 resource "azurerm_windows_web_app" "mcitdevrm" {
-  for_each            = azurerm_service_plan.batcha06sp
+  for_each            = azurerm_service_plan.mcitdevrm
   name                = each.value.name
   resource_group_name = azurerm_resource_group.lynchterraform.name
   location            = azurerm_resource_group.lynchterraform.location
