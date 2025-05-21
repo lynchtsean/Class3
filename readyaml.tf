@@ -16,7 +16,7 @@ resource "azurerm_service_plan" "batcha06sp" {
   for_each            ={for sp in local.linux_app_list: "${sp.name}"=>sp }
   name                = each.value.name
   resource_group_name = azurerm_resource_group.lynchterraform.name
-  location            = azurerm_resource_group.canadacentral.location
+  location            = azurerm_resource_group.lynchterraform.location
   os_type             = each.value.os_type
   sku_name            = each.value.sku_name
 }
