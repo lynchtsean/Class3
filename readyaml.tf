@@ -9,20 +9,7 @@ locals{
       }
     ]
 ])
-    waf_policy=[for f in fileset("${path.module}/configs", "[^_]*.yaml") : yamldecode(file("${path.module}/configs/${f}"))]
-    waf_policy_list = flatten([
-    for policy in local.waf_policy : [
-      for policies in try(policy.listofwafpolicies, []) :{
-        name=policies.name
-        custom_rules=policies.custom_rules
-        managed_rules=policies.managed_rules
-        }
-    ]
-])
-}
-
-
-
+   
 resource "azurerm_service_plan" "batcha06sp" {
   for_each            ={for sp in local.linux_app_list: "${sp.name}"=>sp }
   name                = each.value.name
