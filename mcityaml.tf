@@ -12,7 +12,7 @@ locals {
 ])
 }
    
-resource "azurerm_service_plan" "mcitdevrm" {
+resource "azurerm_service_plan" "grinch24op" {
   for_each            ={for sp in local.windows_app_list: "${sp.name}"=>sp }
   name                = each.value.name
   resource_group_name = azurerm_resource_group.mcitdevrm.name
@@ -21,7 +21,7 @@ resource "azurerm_service_plan" "mcitdevrm" {
   sku_name            = each.value.sku_name
 }
 
-resource "azurerm_windows_web_app" "mcitdevrm" {
+resource "azurerm_windows_web_app" "grinch24op" {
   for_each            = azurerm_service_plan.mcitdevrm
   name                = each.value.name
   resource_group_name = azurerm_resource_group.mcitdevrm.name
