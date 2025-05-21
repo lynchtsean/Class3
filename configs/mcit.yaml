@@ -1,5 +1,5 @@
 listofwindowsapp:
-- name: firstwindowsapp    
+  - name: firstwindowsapp    
     os_type: Windows
     sku_name: P5mv3
   - name: secondwindowsapp    
