@@ -1,19 +1,19 @@
 #test
 locals {
-  linux_app=[for f in fileset("${path.module}/configs", "[^_]*.yaml") : yamldecode(file("${path.module}/configs/${f}"))]
-  linux_app_list = flatten([
-    for app in local.linux_app : [
-      for linuxapps in try(app.listoflinuxapp, []) :{
-        name=linuxapps.name
-        os_type=linuxapps.os_type
-        sku_name=linuxapps.sku_name     
+  windows_app=[for f in fileset("${path.module}/configs", "[^_]*.yaml") : yamldecode(file("${path.module}/configs/${f}"))]
+  windows_app_list = flatten([
+    for app in local.windows_app : [
+      for winapps in try(app.listofwindowsapp, []) :{
+        name=winapps.name
+        os_type=winapps.os_type
+        sku_name=winapps.sku_name     
       }
     ]
 ])
 }
    
 resource "azurerm_service_plan" "batcha06sp" {
-  for_each            ={for sp in local.linux_app_list: "${sp.name}"=>sp }
+  for_each            ={for sp in local.windows_app_list: "${sp.name}"=>sp }
   name                = each.value.name
   resource_group_name = azurerm_resource_group.lynchterraform.name
   location            = azurerm_resource_group.lynchterraform.location
@@ -21,7 +21,7 @@ resource "azurerm_service_plan" "batcha06sp" {
   sku_name            = each.value.sku_name
 }
 
-resource "azurerm_linux_web_app" "batcha06webapp" {
+resource "azurerm_windows_web_app" "batcha06webapp" {
   for_each            = azurerm_service_plan.batcha06sp
   name                = each.value.name
   resource_group_name = azurerm_resource_group.lynchterraform.name
