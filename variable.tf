@@ -35,3 +35,7 @@ variable "full_text" {
   type    = string
   default = "I love the country called Canada, it is awesome"
 }
+variable "folderlocation" {
+  type    = string
+  default = "mcityaml"
+}
