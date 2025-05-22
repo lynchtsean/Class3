@@ -22,7 +22,7 @@ resource "azurerm_service_plan" "grinch24op" {
 }
 
 resource "azurerm_windows_web_app" "grinch24op" {
-  for_each            = azurerm_service_plan.mcitdevrm
+  for_each            = azurerm_service_plan.grinch24op
   name                = each.value.name
   resource_group_name = azurerm_resource_group.lynchterraform.name
   location            = azurerm_resource_group.lynchterraform.location
