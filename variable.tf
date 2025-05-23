@@ -39,7 +39,3 @@ variable "folderlocation" {
   type    = string
   default = "mcityaml"
 }
-variable "linux_web_app_name" {
-  description = "seanlinuxwebapp"
-  type        = string
-}
