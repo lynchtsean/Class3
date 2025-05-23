@@ -57,3 +57,6 @@ output "string_manipulations" {
 output "all_sentence_tasks" {
   value = local.all_in_one_line
 }
+output "nested_list_output" {
+  value = local.nested_list
+}
