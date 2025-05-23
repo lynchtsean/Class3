@@ -39,3 +39,7 @@ variable "folderlocation" {
   type    = string
   default = "mcityaml"
 }
+variable "linux_web_app_name" {
+  description = "The name of the Linux Web App"
+  type        = string
+}
