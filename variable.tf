@@ -39,3 +39,6 @@ variable "folderlocation" {
   type    = string
   default = "mcityaml"
 }
+variable "seanwebbapp"
+  type = string
+  default = "sean"
