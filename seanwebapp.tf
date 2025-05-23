@@ -1,6 +1,20 @@
-resource "azurerm_linux_web_app" "sean" {
-  name                = var.linux_web_app_name
-  resource_group_name = var.resource_group_name
-  location            = var.location
-  service_plan_id     = azurerm_service_plan.sean.id
+resource "azurerm_resource_group" "mynamegroup" {
+  name     = "${var.seanwebapp}rm"
+  location = "canadacentral"
+}
+resource "azurerm_service_plan" "seanserviceplan" {
+  name                = "${var.seanwebapp}sp"
+  resource_group_name = azurerm_resource_group.mynamegroup.name
+  location            = azurerm_resource_group.mynamegroup.location
+  os_type             = "p1v2"
+  sku_name            = "Windows"
+}
+
+resource "azurerm_windows_web_app" "seanwebapp" {
+  name                = "${var.myname}wwa"
+  resource_group_name = azurerm_resource_group.mynamegroup.name
+  location            = azurerm_resource_group.mynamegroup.location
+  service_plan_id     = azurerm_service_plan.seanserviceplan.id
+
+  site_config {}
 }
