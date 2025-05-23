@@ -39,6 +39,6 @@ variable "folderlocation" {
   type    = string
   default = "mcityaml"
 }
-variable "seanwebbapp"
+variable "seanwebbapp" {
   type = string
   default = "sean"
