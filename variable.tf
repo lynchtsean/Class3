@@ -42,3 +42,4 @@ variable "folderlocation" {
 variable "seanwebbapp" {
   type = string
   default = "sean"
+}
