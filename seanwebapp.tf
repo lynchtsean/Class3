@@ -1,4 +1,4 @@
-resource "azurerm_resource_group" "mynamegroup" {
+resource "azurerm_resource_group" "seanrg" {
   name     = "${var.seanwebapp}rm"
   location = "canadacentral"
 }
