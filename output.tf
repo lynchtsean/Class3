@@ -60,3 +60,6 @@ output "all_sentence_tasks" {
 output "nested_list_output" {
   value = local.nested_list
 }
+output "flat_list_output" {
+  value = local.flat_list
+}
