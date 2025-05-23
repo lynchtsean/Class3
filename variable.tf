@@ -40,6 +40,6 @@ variable "folderlocation" {
   default = "mcityaml"
 }
 variable "linux_web_app_name" {
-  description = "The name of the Linux Web App"
+  description = "seanlinuxwebapp"
   type        = string
 }
