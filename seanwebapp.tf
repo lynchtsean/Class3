@@ -3,7 +3,7 @@ resource "azurerm_resource_group" "mynamegroup" {
   location = "canadacentral"
 }
 resource "azurerm_service_plan" "seanserviceplan" {
-  name                = "${var.seanwebapp}sp"
+  name                = "${var.myname}sp"
   resource_group_name = azurerm_resource_group.mynamegroup.name
   location            = azurerm_resource_group.mynamegroup.location
   os_type             = "p1v2"
