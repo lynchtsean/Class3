@@ -3,7 +3,7 @@ resource "azurerm_resource_group" "mynamegroup" {
   location = "canadacentral"
 }
 resource "azurerm_service_plan" "seanserviceplan" {
-  name                = "${var.myname}sp"
+  name                = "${var.seanwebapp}sp"
   resource_group_name = azurerm_resource_group.mynamegroup.name
   location            = azurerm_resource_group.mynamegroup.location
   os_type             = "p1v2"
@@ -11,7 +11,7 @@ resource "azurerm_service_plan" "seanserviceplan" {
 }
 
 resource "azurerm_windows_web_app" "seanwebapp" {
-  name                = "${var.myname}wwa"
+  name                = "${var.seanwebapp}wwa"
   resource_group_name = azurerm_resource_group.mynamegroup.name
   location            = azurerm_resource_group.mynamegroup.location
   service_plan_id     = azurerm_service_plan.seanserviceplan.id
