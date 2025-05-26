@@ -33,24 +33,24 @@ locals {
   cidrs = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
 }
 
-resource "azurerm_resource_group" "example" {
-  name     = "example-resources"
+resource "azurerm_resource_group" "sean" {
+  name     = "sean-resources"
   location = "West Europe"
 }
 
 resource "azurerm_virtual_network" "example" {
-  name                = "example-vnet"
+  name                = "sean-vnet"
   address_space       = ["10.0.0.0/16"]
-  location            = azurerm_resource_group.example.location
-  resource_group_name = azurerm_resource_group.example.name
+  location            = azurerm_resource_group.sean.location
+  resource_group_name = azurerm_resource_group.sean.name
 }
 
-resource "azurerm_subnet" "example" {
+resource "azurerm_subnet" "sean" {
   for_each = { for idx, cidr in local.cidrs : "subnet_${idx}" => cidr }
 
   name                 = each.key
-  resource_group_name  = azurerm_resource_group.example.name
-  virtual_network_name = azurerm_virtual_network.example.name
+  resource_group_name  = azurerm_resource_group.sean.name
+  virtual_network_name = azurerm_virtual_network.sean.name
   address_prefixes     = [each.value]
 
   delegation {
