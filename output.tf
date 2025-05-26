@@ -63,3 +63,6 @@ output "nested_list_output" {
 output "flat_list_output" {
   value = local.flat_list
 }
+output "uppercase_names" {
+  value = [for name in local.names : upper(name)]
+}
