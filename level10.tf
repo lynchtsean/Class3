@@ -20,8 +20,6 @@ locals {
   keys   = ["env", "team", "owner"]
   values = ["prod", "devops", "alice"]
 
-  combined_map = {
-    for i in range(length(local.keys)) :
-    local.keys[i] => local.values[i]
-  }
+  combined_map = zipmap(local.keys, local.values)
 }
+
