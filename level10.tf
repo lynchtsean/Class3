@@ -38,7 +38,7 @@ resource "azurerm_resource_group" "sean" {
   location = "West Europe"
 }
 
-resource "azurerm_virtual_network" "example" {
+resource "azurerm_virtual_network" "sean" {
   name                = "sean-vnet"
   address_space       = ["10.0.0.0/16"]
   location            = azurerm_resource_group.sean.location
