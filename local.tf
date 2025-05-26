@@ -21,4 +21,3 @@ locals{
   lower_text    = lower(local.original_text)
   }
   names = ["eastus", "westeurope", "centralindia"]
-  }
