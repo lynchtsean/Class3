@@ -69,3 +69,6 @@ output "uppercase_names" {
 output "vms_mapping" {
   value = local.vms_map
 }
+output "combined_map" {
+  value = local.combined_map
+}
