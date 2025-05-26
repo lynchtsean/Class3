@@ -66,6 +66,6 @@ output "flat_list_output" {
 output "uppercase_names" {
   value = [for name in local.names : upper(name)]
 }
-output "vms_map" {
+output "vms_mapping" {
   value = local.vms_map
 }
