@@ -21,5 +21,8 @@ locals {
   values = ["prod", "devops", "alice"]
 
   combined_map = zipmap(local.keys, local.values)
-}
-
+  }
+locals {
+  regions    = ["eastus", "westeurope", "southindia", "centralus"]
+  us_regions = filter(local.regions, r -> contains(r, "us"))
+  }
