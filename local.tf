@@ -23,3 +23,8 @@ locals{
 locals {
   names = ["eastus", "westeurope", "centralindia"]
   }
+locals {
+  vms = ["vm1", "vm2", "vm3"]
+
+  vms_map = { for idx, name in local.vms : "vm_${idx}" => name }
+}
