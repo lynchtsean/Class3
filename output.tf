@@ -72,3 +72,6 @@ output "vms_mapping" {
 output "combined_map" {
   value = local.combined_map
 }
+output "justus_regions" {
+  value = local.us_regions
+}
