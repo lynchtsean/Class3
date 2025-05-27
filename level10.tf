@@ -69,13 +69,13 @@ locals {
   vm_names = var.vm_names
 }
 
-resource "azurerm_resource_group" "sean" {
+resource "azurerm_resource_group" "lynch" {
   name     = var.resource_group_name
   location = var.location
 }
 
 resource "azurerm_virtual_network" "sean" {
-  name                = "sean-network"
+  name                = "lynch-network"
   address_space       = ["10.0.0.0/16"]
   location            = var.location
   resource_group_name = var.resource_group_name
@@ -84,11 +84,11 @@ resource "azurerm_virtual_network" "sean" {
 resource "azurerm_subnet" "sean" {
   name                 = "sean-subnet"
   resource_group_name  = var.resource_group_name
-  virtual_network_name = azurerm_virtual_network.sean.name
+  virtual_network_name = azurerm_virtual_network.lynch.name
   address_prefixes     = ["10.0.2.0/24"]
 }
 
-resource "azurerm_network_interface" "sean" {
+resource "azurerm_network_interface" "lynch" {
   for_each            = toset(local.vm_names)
   name                = "${each.key}-nic"
   location            = var.location
@@ -96,12 +96,12 @@ resource "azurerm_network_interface" "sean" {
 
   ip_configuration {
     name                          = "internal"
-    subnet_id                     = azurerm_subnet.sean.id
+    subnet_id                     = azurerm_subnet.lynch.id
     private_ip_address_allocation = "Dynamic"
   }
 }
 
-resource "azurerm_windows_virtual_machine" "sean" {
+resource "azurerm_windows_virtual_machine" "lynch" {
   for_each              = toset(local.vm_names)
   name                  = each.key
   resource_group_name   = var.resource_group_name
