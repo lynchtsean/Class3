@@ -74,15 +74,15 @@ resource "azurerm_resource_group" "lynch" {
   location = var.location
 }
 
-resource "azurerm_virtual_network" "sean" {
+resource "azurerm_virtual_network" "lynch" {
   name                = "lynch-network"
   address_space       = ["10.0.0.0/16"]
   location            = var.location
   resource_group_name = var.resource_group_name
 }
 
-resource "azurerm_subnet" "sean" {
-  name                 = "sean-subnet"
+resource "azurerm_subnet" "lynch" {
+  name                 = "lynch-subnet"
   resource_group_name  = var.resource_group_name
   virtual_network_name = azurerm_virtual_network.lynch.name
   address_prefixes     = ["10.0.2.0/24"]
