@@ -43,3 +43,32 @@ variable "my_name" {
   type = string
   default = "sean"
 }
+variable "vm_names" {
+  description = "List of VM names to create"
+  type        = list(string)
+  default     = ["sean-vm1", "sean-vm2", "sean-vm3"]
+}
+
+variable "admin_username" {
+  description = "Administrator username for the virtual machines"
+  type        = string
+  sensitive   = true
+}
+
+variable "admin_password" {
+  description = "Administrator password for the virtual machines"
+  type        = string
+  sensitive   = true
+}
+
+variable "location" {
+  description = "Azure region to deploy resources"
+  type        = string
+  default     = "West Europe"
+}
+
+variable "resource_group_name" {
+  description = "Name of the resource group"
+  type        = string
+  default     = "sean-resources"
+}
