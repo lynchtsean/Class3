@@ -70,5 +70,5 @@ variable "location" {
 variable "resource_group_name" {
   description = "Name of the resource group"
   type        = string
-  default     = "sean-resources"
+  default     = "lynch-resources"
 }
