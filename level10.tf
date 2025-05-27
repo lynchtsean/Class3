@@ -110,7 +110,7 @@ resource "azurerm_windows_virtual_machine" "lynch" {
   admin_username        = var.admin_username
   admin_password        = var.admin_password
   network_interface_ids = [
-    azurerm_network_interface.sean[each.key].id,
+    azurerm_network_interface.lynch[each.key].id,
   ]
 
   os_disk {
