@@ -9,13 +9,13 @@ locals {
   }
 }
 
-resource "azurerm_resource_group" "rg" {
+resource "azurerm_resource_group" "subnetsean-rg" {
   name     = local.resource_group_name
   location = local.location
 }
 
 resource "azurerm_virtual_network" "vnet" {
-  name                = "example-vnet"
+  name                = "seanvnet-vnet"
   address_space       = ["10.0.0.0/16"]
   location            = local.location
   resource_group_name = local.resource_group_name
