@@ -1,5 +1,5 @@
 locals {
-  subnet_file = file("${path.module}/subnetsyaml")
+  subnet_file = file("${path.module}/subnets.yaml")
   subnet_map  = yamldecode(local.subnet_file).subnets
 }
 
