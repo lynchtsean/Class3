@@ -32,7 +32,7 @@ resource "azurerm_machine_learning_workspace" "azuremlworkspace" {
   name                    = var.ml_workspace_name
   location                = var.location
   resource_group_name     = azurerm_resource_group.lynrg.name
-  application_insights_id = azurerm_application_insights.applicationinsight.id
+  application_insights_id = azurerm_application_insights.lynapplicationinsight.id
   key_vault_id            = azurerm_key_vault.azurekeyvault.id
   storage_account_id      = azurerm_storage_account.azurestorageaccount.id
 
