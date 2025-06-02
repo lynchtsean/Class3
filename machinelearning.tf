@@ -8,7 +8,7 @@ resource "azurerm_resource_group" "lynrg" {
 resource "azurerm_application_insights" "lynapplicationinsight" {
   name                = var.app_insights_name
   location            = var.location
-  resource_group_name = azurerm_resource_group.mlrg.name
+  resource_group_name = azurerm_resource_group.lynrg.name
   application_type    = "web"
 }
 
