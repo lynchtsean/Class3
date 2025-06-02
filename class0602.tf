@@ -13,7 +13,7 @@ locals {
 
   }
  
-  environment = lookup(local.env_names, terraform.workspace, "Unknown")
+  environment = lookup(local.env_names, "dev", "Unknown")
 
 }
 output "selected_environment_name" {
