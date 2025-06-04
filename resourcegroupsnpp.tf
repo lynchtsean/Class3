@@ -1,10 +1,10 @@
 locals {
   resource_groups = {
-    rg-dev-montreal   = "montreal"
-    rg-dev-toronto   = "toronto"
-    rg-dev-ottawa  = "ottawa"
-    rg-dev-winnipeg   = "winnipeg"
-    rg-dev-edmonton       = "edmonton"
+    rg-dev-eastus   = "eastus"
+    rg-dev-westus   = "westus"
+    rg-dev-central  = "centralus"
+    rg-dev-canada   = "canadacentral"
+    rg-dev-canadawest      = "canadawest"
   }
 }
 
