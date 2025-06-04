@@ -4,7 +4,7 @@ locals {
     rg-dev-westus   = "westus"
     rg-dev-central  = "centralus"
     rg-dev-canada   = "canadacentral"
-    rg-dev-canadawest      = "canadawest"
+    rg-dev-canadawest  = "canadawest"
   }
 }
 
