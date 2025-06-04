@@ -1,6 +1,3 @@
-lookup(map, key, default)
-
- 
 locals {
 
   env_names = {
