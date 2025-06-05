@@ -1,6 +1,6 @@
 module "linux_web_app" {
   source              = "./modules/linux_web_app"
-  name                = "mymcitlinux-web-app"
+  name                = "mytestlinux-web-app"
   location            = azurerm_resource_group.lynchterraform.location
   resource_group_name = azurerm_resource_group.lynchterraform.name
 
