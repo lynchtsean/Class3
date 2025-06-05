@@ -1,6 +1,18 @@
+locals {
+  linux_web_apps = {
+    mytestlinux-web-app-1 = "lynchwebapp_1"
+    mytestlinux-web-app-2 = "lynchwebapp_2"
+    mytestlinux-web-app-3 = "lynchwebapp_3"
+    mytestlinux-web-app-4 = "lynchwebapp_4"
+    mytestlinux-web-app-5 = "lynchwebapp_5"
+  }
+}
+
 module "linux_web_app" {
+  for_each            = local.linux_web_apps
   source              = "./modules/linux_web_app"
-  name                = "mytestlinux-web-app"
+
+  name                = each.key
   location            = azurerm_resource_group.lynchterraform.location
   resource_group_name = azurerm_resource_group.lynchterraform.name
 
